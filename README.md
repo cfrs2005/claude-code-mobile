@@ -11,6 +11,9 @@
 
 [**🇺🇸 English**](README.md) | [**🇨🇳 中文**](README.zh-CN.md)
 
+**📖 Deployment Guides:**  
+🏠 [Ugreen NAS Deployment Guide](docs/ugreen-nas-deployment-guide.md) | 🏠 [绿联NAS部署指南](docs/绿联NAS部署手册.md)
+
 </div>
 
 ## Overview

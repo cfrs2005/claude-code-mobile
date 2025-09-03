@@ -1,0 +1,28 @@
+# Authentication and user data - should not be committed
+claude-config/
+happy-auth/
+claude-user-config.json
+
+# User workspace - project-specific files
+workspace/
+
+# Environment configuration - contains sensitive tokens
+config.env
+
+# Logs
+*.log
+
+# Docker volumes
+volumes/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp

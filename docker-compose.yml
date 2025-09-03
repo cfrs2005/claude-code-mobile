@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  happycoder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./config.env:/config/config.env:ro
+      - ./workspace:/workspace
+      - ./happy-auth:/root/.happy
+      - ./claude-config:/root/.claude
+      - ./claude-user-config.json:/root/.claude.json
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    restart: unless-stopped

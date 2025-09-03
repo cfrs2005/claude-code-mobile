@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   happycoder:
-    image: yourusername/claude-code-mobile:latest
+    image: cfrs2005/claude-code-mobile:latest
     volumes:
       - ./config.env:/config/config.env:ro
       - ./workspace:/workspace

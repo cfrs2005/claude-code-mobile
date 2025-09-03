@@ -21,14 +21,14 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        username: cfrs2005
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         
     - name: Extract metadata
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ secrets.DOCKERHUB_USERNAME }}/claude-code-mobile
+        images: cfrs2005/claude-code-mobile
         tags: |
           type=ref,event=tag
           type=semver,pattern={{version}}

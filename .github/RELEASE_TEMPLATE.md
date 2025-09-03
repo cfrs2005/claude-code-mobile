@@ -16,7 +16,7 @@ This is the initial release of Claude Code Mobile Service - a containerized solu
 
 1. Clone repository and copy config:
 ```bash
-git clone https://github.com/yourusername/claude-code-mobile
+git clone https://github.com/cfrs2005/claude-code-mobile
 cd claude-code-mobile
 cp config.env.example config.env
 ```
@@ -33,8 +33,8 @@ docker-compose up --build
 ## 📦 Docker Hub
 
 Pre-built images available:
-- `yourusername/claude-code-mobile:latest`  
-- `yourusername/claude-code-mobile:v1.0.0`
+- `cfrs2005/claude-code-mobile:latest`  
+- `cfrs2005/claude-code-mobile:v1.0.0`
 
 Use with production compose file:
 ```bash

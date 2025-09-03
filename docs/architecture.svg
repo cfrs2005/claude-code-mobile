@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="containerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284C7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e293b">
+    Claude Code Mobile Service Architecture
+  </text>
+
+  <!-- Mobile Device -->
+  <rect x="50" y="120" width="120" height="180" rx="20" fill="url(#phoneGradient)" stroke="#4338ca" stroke-width="2"/>
+  <rect x="65" y="140" width="90" height="140" rx="5" fill="#1e1b4b"/>
+  <text x="110" y="320" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+    📱 Mobile App
+  </text>
+  <text x="110" y="335" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#e2e8f0">
+    (Happy)
+  </text>
+
+  <!-- Happy-coder Bridge -->
+  <rect x="300" y="150" width="200" height="120" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#334155">
+    🌉 Happy-coder
+  </text>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748b">
+    Web Bridge
+  </text>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94a3b8">
+    • HTTP/WebSocket Server
+  </text>
+  <text x="400" y="235" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94a3b8">
+    • Mobile Interface
+  </text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94a3b8">
+    • Authentication Handling
+  </text>
+
+  <!-- Claude Code AI -->
+  <rect x="600" y="150" width="150" height="120" rx="10" fill="url(#aiGradient)" stroke="#059669" stroke-width="2"/>
+  <text x="675" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    🧠 Claude Code
+  </text>
+  <text x="675" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#dcfce7">
+    AI CLI
+  </text>
+  <text x="675" y="220" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#bbf7d0">
+    • Code Analysis
+  </text>
+  <text x="675" y="235" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#bbf7d0">
+    • AI Programming
+  </text>
+  <text x="675" y="250" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#bbf7d0">
+    • Task Automation
+  </text>
+
+  <!-- Docker Container -->
+  <rect x="250" y="350" width="300" height="200" rx="15" fill="url(#containerGradient)" stroke="#0284c7" stroke-width="3"/>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    🐳 Docker Container
+  </text>
+
+  <!-- Container Components -->
+  <rect x="270" y="400" width="80" height="60" rx="5" fill="#e0f2fe" stroke="#0369a1" stroke-width="1"/>
+  <text x="310" y="420" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#0c4a6e">
+    Node.js 20
+  </text>
+  <text x="310" y="435" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#075985">
+    Alpine Linux
+  </text>
+  <text x="310" y="450" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#075985">
+    Runtime
+  </text>
+
+  <rect x="360" y="400" width="80" height="60" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#92400e">
+    Auto Setup
+  </text>
+  <text x="400" y="435" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#b45309">
+    Expect Scripts
+  </text>
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#b45309">
+    Interactive
+  </text>
+
+  <rect x="450" y="400" width="80" height="60" rx="5" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="490" y="420" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#5b21b6">
+    Persistence
+  </text>
+  <text x="490" y="435" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#6d28d9">
+    Volume Mounts
+  </text>
+  <text x="490" y="450" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#6d28d9">
+    State Data
+  </text>
+
+  <!-- Storage Volumes -->
+  <rect x="270" y="480" width="70" height="50" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <text x="305" y="500" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#166534">
+    /workspace
+  </text>
+  <text x="305" y="515" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#22c55e">
+    Project Files
+  </text>
+
+  <rect x="350" y="480" width="70" height="50" rx="5" fill="#fef7cd" stroke="#eab308" stroke-width="1"/>
+  <text x="385" y="500" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#a16207">
+    ~/.happy
+  </text>
+  <text x="385" y="515" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#ca8a04">
+    Auth Data
+  </text>
+
+  <rect x="430" y="480" width="70" height="50" rx="5" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="465" y="500" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#6d28d9">
+    ~/.claude
+  </text>
+  <text x="465" y="515" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#8b5cf6">
+    Config
+  </text>
+
+  <!-- Connection arrows -->
+  <!-- Mobile to Happy-coder -->
+  <path d="M 170 210 Q 230 210 300 210" stroke="#4f46e5" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="235" y="200" font-family="Arial, sans-serif" font-size="10" fill="#4f46e5" font-weight="bold">
+    HTTP/WebSocket
+  </text>
+
+  <!-- Happy-coder to Claude Code -->
+  <path d="M 500 210 Q 550 210 600 210" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="550" y="200" font-family="Arial, sans-serif" font-size="10" fill="#059669" font-weight="bold">
+    CLI Interface
+  </text>
+
+  <!-- Happy-coder to Container -->
+  <path d="M 400 270 Q 400 310 400 350" stroke="#0284c7" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Claude Code to Container -->
+  <path d="M 675 270 Q 675 310 550 350" stroke="#0284c7" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <!-- Flow labels -->
+  <text x="50" y="570" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#374151">
+    Data Flow:
+  </text>
+  <text x="140" y="570" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">
+    1. Mobile connects to Happy-coder bridge
+  </text>
+  <text x="360" y="570" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">
+    2. Bridge interfaces with Claude Code CLI
+  </text>
+  <text x="600" y="570" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">
+    3. AI processes in container
+  </text>
+</svg>

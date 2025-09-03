@@ -94,3 +94,39 @@ nano config.env
 # Start with production compose
 docker-compose -f docker-compose.prod.yml up
 ```
+
+## Release Process
+
+This project follows a standard release workflow for Docker Hub and GitHub:
+
+### Complete Release Flow
+1. **Code Changes**: Make modifications to project files
+2. **Version Bump**: Update version numbers in relevant files
+3. **Documentation**: Update README.md, README.zh-CN.md, and CLAUDE.md
+4. **Git Operations**:
+   ```bash
+   git add .
+   git commit -m "Release vX.X.X: description"
+   git tag -a vX.X.X -m "Release vX.X.X: description"
+   git push origin main --tags
+   ```
+5. **Docker Build & Push**:
+   ```bash
+   docker build -t cfrs2005/claude-code-mobile:vX.X.X -t cfrs2005/claude-code-mobile:latest .
+   docker push cfrs2005/claude-code-mobile:vX.X.X
+   docker push cfrs2005/claude-code-mobile:latest
+   ```
+6. **GitHub Release**: Create release notes using template in `.github/RELEASE_TEMPLATE.md`
+
+### Key Points
+- Always increment version numbers (semantic versioning)
+- Docker images are manually pushed due to authentication requirements
+- GitHub Actions workflow exists but requires DOCKERHUB_TOKEN secret configuration
+- Both English and Chinese documentation must be updated
+- SVG architecture diagram located in `docs/architecture.svg`
+
+### Project Maintenance Notes
+- Authentication directories (`claude-config/`, `happy-auth/`) are git-ignored
+- Configuration template (`config.env.example`) should be updated when new env vars added
+- First-time users require manual Happy authentication step via docker exec
+- Container rebuild required only for Dockerfile/entrypoint.sh changes

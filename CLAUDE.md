@@ -16,12 +16,12 @@ This is a containerized service that provides mobile access to Claude Code throu
 
 ## Key Files
 
-- `Dockerfile.simple`: Production container build
-- `entrypoint.simple.sh`: Automated startup with expect script for interactive prompts
-- `docker-compose.yml`: Service configuration with volume mounts
-- `config.env`: Environment variables for API endpoints and authentication
-- `claude-user-config.json`: Claude Code user configuration
-- Volume directories: `./claude-config/`, `./happy-auth/`, `./workspace/`
+- `Dockerfile`: Container build configuration
+- `entrypoint.sh`: Automated startup with expect script for interactive prompts  
+- `docker-compose.yml`: Development service configuration
+- `docker-compose.prod.yml`: Production service configuration using Docker Hub image
+- `config.env.example`: Template for environment variables and API authentication
+- Volume directories: `./claude-config/`, `./happy-auth/`, `./workspace/` (auto-created)
 
 ## Development Commands
 
@@ -74,11 +74,23 @@ docker exec -it happycoderimage_happycoder_1 happy
 
 ## Container Rebuild Requirements
 
-Script modifications in `entrypoint.simple.sh` require image rebuild:
+Script modifications in `entrypoint.sh` require image rebuild:
 ```bash
 docker-compose down
-docker-compose build
+docker-compose build --no-cache
 docker-compose up
 ```
 
 Volume-mounted files (`config.env`, user configs) update without rebuild.
+
+## Production Deployment
+
+Use pre-built Docker Hub image:
+```bash
+# Copy config template
+cp config.env.example config.env
+# Edit with your API token
+nano config.env
+# Start with production compose
+docker-compose -f docker-compose.prod.yml up
+```

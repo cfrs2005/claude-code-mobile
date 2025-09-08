@@ -157,6 +157,12 @@ services:
 4. Push to branch: `git push origin feature/amazing-feature`
 5. Open Pull Request
 
+## 🙏 Acknowledgments
+
+Special thanks to **Zhipu AI** for their powerful GLM models that inspire AI development innovation.
+
+🤖 **Try Zhipu AI GLM Models**: [Get started with Zhipu AI](https://www.bigmodel.cn/invite?icode=jDJudw7U/CqRSv12+AkDZJmwcr074zMJTpgMb8zZZvg=)
+
 ## 📞 Support & Feedback
 
 - 🐛 [Report Issues](https://github.com/cfrs2005/claude-code-mobile/issues)

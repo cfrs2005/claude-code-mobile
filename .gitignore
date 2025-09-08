@@ -26,3 +26,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Tutorial directories
+ugreen-nas-tutorial/

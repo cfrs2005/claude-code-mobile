@@ -160,6 +160,12 @@ docker-compose logs happycoder
 4. 推送到你的分支：`git push origin feature/新功能名`
 5. 提交 Pull Request 请求合并
 
+## 🙏 致谢
+
+特别感谢 **智谱AI** 的强大 GLM 模型为 AI 开发创新提供灵感和动力。
+
+🤖 **体验智谱AI GLM模型**：[开始使用智谱AI](https://www.bigmodel.cn/invite?icode=jDJudw7U/CqRSv12+AkDZJmwcr074zMJTpgMb8zZZvg=)
+
 ## 📞 支持与反馈
 
 - 🐛 [报告问题](https://github.com/cfrs2005/claude-code-mobile/issues)

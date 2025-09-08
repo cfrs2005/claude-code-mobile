@@ -140,6 +140,61 @@ docker-compose pull && docker-compose up -d
 | 认证反复失败 | 删除 `./happy-auth/` 目录后重新启动 |
 | 项目文件找不到 | 确认文件放在 `./workspace/` 目录中 |
 
+## ⚠️ 重要安全提醒
+
+### Happy 守护进程管理
+
+**Happy 作为常驻守护进程运行**，即使没有活跃的界面连接也会持续运行。这使得移动设备能够无缝连接，但需要正确的进程管理来保证安全性。
+
+**官方 Happy 守护进程管理：**
+```bash
+# 检查守护进程状态
+happy daemon status
+
+# 列出活跃会话
+happy daemon list
+
+# 停止守护进程（会话保持活跃）
+happy daemon stop
+
+# 启动守护进程（如果未运行）
+happy daemon start
+
+# 清理所有 happy 进程（推荐用于完全关闭）
+happy doctor clean
+```
+
+**备用手动进程管理：**
+```bash
+# 检查 Happy 守护进程是否在运行
+ps aux | grep happy-coder
+
+# 手动终止（如果 happy daemon 命令无效）
+pkill -f "happy-coder.*daemon"
+```
+
+**典型的 Happy 守护进程：**
+```
+node --no-warnings --no-deprecation /opt/homebrew/lib/node_modules/happy-coder/dist/index.mjs daemon start-sync
+```
+
+### 安全注意事项
+
+🔒 **不使用时运行 `happy daemon stop` 或 `happy doctor clean`** 以防止未授权访问  
+🔒 **使用 `happy daemon list` 定期监控活跃会话** 特别是在共享环境中  
+🔒 **使用防火墙规则** 限制对 Happy 服务端口的网络访问  
+🔒 **保护 API 令牌安全** 并定期轮换更新  
+🔒 **定期检查认证日志** 在 `./happy-auth/` 目录中
+
+**推荐的关闭流程：**
+```bash
+# 完全清理（终止所有 happy 进程）
+happy doctor clean
+
+# 温和关闭（保持会话但停止守护进程）
+happy daemon stop
+```
+
 ## 🚢 生产环境部署
 
 生产环境推荐使用预构建的 Docker Hub 镜像：

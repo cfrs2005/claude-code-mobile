@@ -139,6 +139,61 @@ docker-compose pull && docker-compose up -d
 | Mobile can't connect | Verify firewall settings and container status |
 | Authentication fails | Delete `./happy-auth/` and restart |
 
+## ⚠️ Important Security Notes
+
+### Happy Daemon Process Management
+
+**Happy runs as a persistent daemon process** that continues running even without an active UI connection. This enables seamless mobile connectivity but requires proper process management for security.
+
+**Official Happy Daemon Management:**
+```bash
+# Check daemon status
+happy daemon status
+
+# List active sessions  
+happy daemon list
+
+# Stop daemon (sessions stay alive)
+happy daemon stop
+
+# Start daemon if not running
+happy daemon start
+
+# Clean up all happy processes (recommended for complete shutdown)
+happy doctor clean
+```
+
+**Alternative Manual Process Management:**
+```bash
+# Check if Happy daemon is running
+ps aux | grep happy-coder
+
+# Manual kill (if happy daemon commands don't work)
+pkill -f "happy-coder.*daemon"
+```
+
+**Typical Happy daemon process:**
+```
+node --no-warnings --no-deprecation /opt/homebrew/lib/node_modules/happy-coder/dist/index.mjs daemon start-sync
+```
+
+### Security Considerations
+
+🔒 **Use `happy daemon stop` or `happy doctor clean` when not in use** to prevent unauthorized access
+🔒 **Monitor active sessions with `happy daemon list`** regularly in shared environments  
+🔒 **Use firewall rules** to restrict network access to Happy service ports
+🔒 **Keep API tokens secure** and rotate them regularly
+🔒 **Review authentication logs** in `./happy-auth/` directory
+
+**Recommended shutdown procedure:**
+```bash
+# For complete cleanup (kills all happy processes)
+happy doctor clean
+
+# For gentle shutdown (keeps sessions but stops daemon)
+happy daemon stop
+```
+
 ## 🚢 Production Deployment
 
 For production environments, use the pre-built Docker Hub images:

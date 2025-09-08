@@ -14,6 +14,9 @@
 **📖 Deployment Guides:**  
 🏠 [Ugreen NAS Deployment Guide](docs/ugreen-nas-deployment-guide.md) | 🏠 [绿联NAS部署指南](docs/绿联NAS部署手册.md)
 
+**🙏 Acknowledgments:**  
+🤖 Special thanks to [Zhipu AI GLM Models](https://www.bigmodel.cn/invite?icode=jDJudw7U/CqRSv12+AkDZJmwcr074zMJTpgMb8zZZvg=) for inspiring AI development innovation
+
 </div>
 
 ## Overview
@@ -156,12 +159,6 @@ services:
 3. Commit changes: `git commit -m 'Add amazing feature'`
 4. Push to branch: `git push origin feature/amazing-feature`
 5. Open Pull Request
-
-## 🙏 Acknowledgments
-
-Special thanks to **Zhipu AI** for their powerful GLM models that inspire AI development innovation.
-
-🤖 **Try Zhipu AI GLM Models**: [Get started with Zhipu AI](https://www.bigmodel.cn/invite?icode=jDJudw7U/CqRSv12+AkDZJmwcr074zMJTpgMb8zZZvg=)
 
 ## 📞 Support & Feedback
 

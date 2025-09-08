@@ -14,6 +14,9 @@
 **📖 部署指南：**  
 🏠 [绿联NAS部署指南](docs/绿联NAS部署手册.md) | 🏠 [Ugreen NAS Deployment Guide](docs/ugreen-nas-deployment-guide.md)
 
+**🙏 致谢：**  
+🤖 特别感谢 [智谱AI GLM模型](https://www.bigmodel.cn/invite?icode=jDJudw7U/CqRSv12+AkDZJmwcr074zMJTpgMb8zZZvg=) 为AI开发创新提供灵感
+
 </div>
 
 ## 项目概述
@@ -159,12 +162,6 @@ docker-compose logs happycoder
 3. 提交代码更改：`git commit -m '添加新功能'`
 4. 推送到你的分支：`git push origin feature/新功能名`
 5. 提交 Pull Request 请求合并
-
-## 🙏 致谢
-
-特别感谢 **智谱AI** 的强大 GLM 模型为 AI 开发创新提供灵感和动力。
-
-🤖 **体验智谱AI GLM模型**：[开始使用智谱AI](https://www.bigmodel.cn/invite?icode=jDJudw7U/CqRSv12+AkDZJmwcr074zMJTpgMb8zZZvg=)
 
 ## 📞 支持与反馈
 

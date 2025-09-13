@@ -22,17 +22,10 @@ cd /workspace
 if [ -f "/root/.happy/access.key" ]; then
     echo "Authentication found, starting Happy with auto-config..."
     echo "Working directory: $(pwd)"
-    if [ "${IS_SANDBOX:-0}" = "1" ]; then
-    echo "Sandbox mode detected, using --dangerously-skip-permissions"
-    HAPPY_ARGS="--dangerously-skip-permissions"
-    else
-        echo "Using default mode"
-        HAPPY_ARGS=""
-    fi
     # Use expect to handle Claude Code initial setup
     expect -c "
     set timeout -1
-    spawn happy $HAPPY_ARGS
+    spawn happy
     expect {
         \"Choose the text style\" {
             puts \"Auto-selecting dark mode...\"

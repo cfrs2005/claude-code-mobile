@@ -23,6 +23,8 @@
 
 Claude Code Mobile Service bridges the gap between powerful AI coding assistance and mobile accessibility. This containerized solution allows developers to access Claude Code from their smartphones using the Happy-coder mobile interface, enabling coding workflows anywhere, anytime.
 
+**Current Version:** Built with Claude Code `v2.1.12` (latest stable release)
+
 ## ✨ Key Features
 
 | Feature | Description |
